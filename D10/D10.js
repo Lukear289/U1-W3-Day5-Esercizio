@@ -150,7 +150,19 @@ console.log('Oggi è', whatDayIsIt());
       values: [3, 3, 4]
   }
 */
-
+const rollTheDices = function (lanciodadi) {
+  const dadi = {
+    sum: 0,
+    values: [],
+  };
+  for (let i = 0; i < lanciodadi; i++) {
+    const newdice = dice();
+    dadi.sum = dadi.sum + newdice;
+    dadi.values.push(newdice);
+  }
+  return dadi;
+};
+console.log(rollTheDices(4));
 /* ESERCIZIO 9
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
 */
@@ -164,7 +176,8 @@ console.log('Oggi è', whatDayIsIt());
 // NOTA: l'array "movies" usato in alcuni esercizi è definito alla fine di questo file
 
 /* ESERCIZIO 11
-  Scrivi una funzione chiamata "deleteProp" che riceve un oggetto e una stringa come parametri; deve ritornare l'oggetto fornito dopo aver eliminato
+  Scrivi una funzione chiamata "deleteProp" che riceve un oggetto e una stringa come parametri; deve ritornare l'oggetto 
+  fornito dopo aver eliminato
   in esso la proprietà chiamata come la stringa passata come secondo parametro.
 */
 
@@ -177,28 +190,34 @@ console.log('Oggi è', whatDayIsIt());
 */
 
 /* ESERCIZIO 14
-  Scrivi una funzione chiamata "onlyTheYears" che crea un array con solamente gli anni di uscita dei film contenuti nell'array "movies" fornito.
+  Scrivi una funzione chiamata "onlyTheYears" che crea un array con solamente gli anni di uscita dei film contenuti nell'array "movies" 
+  fornito.
 */
 
 /* ESERCIZIO 15
-  Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i film prodotto nel millennio scorso contenuti nell'array "movies" fornito.
+  Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i film prodotto nel millennio scorso contenuti 
+  nell'array "movies" fornito.
 */
 
 /* ESERCIZIO 16
-  Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
+  Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film 
+  contenuti nell'array "movies" fornito.
 */
 
 /* ESERCIZIO 17
-  Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
+  Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" 
+  fornito che la contengono nel titolo.
 */
 
 /* ESERCIZIO 18
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
-  "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
+  "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, 
+  mentre "unmatch" deve includere tutti i rimanenti.
 */
 
 /* ESERCIZIO 19
-  Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
+  Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito 
+  privo dell'elemento nella posizione ricevuta come parametro.
 */
 
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
@@ -234,7 +253,8 @@ console.log('Oggi è', whatDayIsIt());
 // [EXTRA] JS Avanzato
 
 /* ESERCIZIO 27
-  Crea una funzione chiamata "halfTree" che riceve un numero come parametro e costruisce un mezzo albero di "*" (asterischi) dell'altezza fornita.
+  Crea una funzione chiamata "halfTree" che riceve un numero come parametro e costruisce un mezzo albero di "*" (asterischi) 
+  dell'altezza fornita.
 
   Esempio:
   halfTree(3)
